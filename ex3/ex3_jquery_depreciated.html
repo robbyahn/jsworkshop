@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Javascript Debugging with Firebug</title>	
+	</head>
+	<body>
+		<div>
+			<div id="messageLabel">&nbsp;</div>
+			<a href="#">Click Me!</a>
+			
+			<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+			<!-- script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script -->
+			
+			<!-- https://github.com/jquery/jquery-migrate 			
+				This plugin can be used to detect and restore APIs or features that have been deprecated in jQuery 
+				and removed as of version 1.9.depreciated function
+					https://github.com/jquery/jquery-migrate/blob/master/warnings.md
+			-->
+			<script>
+				$("a").live( "click", function() {
+				  alert( "Goodbye!" ); // jQuery 1.3+
+				}); 
+				
+				/*				
+				$( document ).delegate( "a", "click", function() {
+				  alert( "Goodbye!" ); // jQuery 1.4.3+
+				}); */
+				
+				/*
+				$( document ).on( "click", "a", function() {
+				  alert( "Goodbye!" );  // jQuery 1.7+
+				}); */
+			</script>
+		</div>
+	</body>
+</html>
